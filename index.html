@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Про системы — электромонтаж, видеонаблюдение, домофоны и оптоволокно в Москве и области</title>
+<meta name="description" content="Электромонтажные работы, установка видеонаблюдения и домофонов, сварка оптоволокна. Частным клиентам и бизнесу. Москва и Московская область. 8 916 199-69-65">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@500;600;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;
+  --panel:#141414;
+  --line:#2b2b2b;
+  --white:#fff;
+  --muted:#a3a3a3;
+  --red:#f50a0a;
+  --red-dim:#b80000;
+  --display:"Jura","Arial Narrow",Arial,sans-serif;
+  --body:"Golos Text",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --wrap:1180px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--black);color:var(--white);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+.top__logo img{height:64px;width:auto}
+.top nav{display:flex;gap:28px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--white)}
+.top__phone{font-family:var(--display);font-weight:700;font-size:18px;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+.top__phone:hover{color:var(--red)}
+
+/* ---------- hero ---------- */
+.hero{padding:72px 0 96px;overflow:hidden}
+.hero .wrap{display:block}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(26px,5.2vw,64px);line-height:1.05;letter-spacing:.01em;margin:0 0 28px;text-transform:uppercase}
+.hero h1 span{display:block}
+.hero__lead{color:var(--muted);font-size:19px;max-width:32em;margin:0 0 36px}
+.hero__lead b{color:var(--white);font-weight:500}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;font:600 17px/1 var(--body);text-decoration:none;border:2px solid var(--red);border-radius:28px;transition:background .2s,color .2s}
+.btn--solid{background:var(--red);color:var(--white)}
+.btn--solid:hover{background:var(--red-dim);border-color:var(--red-dim)}
+.btn--ghost{color:var(--white);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--white)}
+.btn svg{width:22px;height:22px;flex:none}
+.social{display:flex;gap:8px}
+.social a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;color:var(--white)}
+.social a:hover{border-color:var(--red);color:var(--red)}
+.social svg{width:20px;height:20px}
+.top__right{display:flex;align-items:center;gap:18px}
+.hero__area{margin-top:32px;font-size:15px;color:var(--muted)}
+
+
+/* ---------- section scaffolding ---------- */
+section{padding:96px 0;border-top:1px solid var(--line)}
+.h2{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:.01em;margin:0 0 20px}
+.sub{color:var(--muted);max-width:40em;margin:0}
+
+/* ---------- services ---------- */
+.svc{display:grid;grid-template-columns:320px 1fr;gap:56px;padding:64px 0;border-top:1px solid var(--line)}
+.svc:first-of-type{border-top:0;padding-top:56px}
+.svc__head{position:sticky;top:124px;align-self:start}
+.svc__head h3{font-family:var(--display);font-weight:700;font-size:30px;line-height:1.1;margin:0 0 14px;text-transform:uppercase}
+.svc__head h3::before{content:"";display:block;width:34px;height:34px;border:2px solid var(--red);border-radius:50%;margin-bottom:22px}
+.svc__head p{color:var(--muted);margin:0;font-size:16px}
+.svc__list{list-style:none;margin:0 0 32px;padding:0;columns:2;column-gap:40px}
+.svc__list li{break-inside:avoid;padding:13px 0 13px 22px;border-bottom:1px solid var(--line);position:relative}
+.svc__list li::before{content:"";position:absolute;left:0;top:22px;width:8px;height:8px;border-radius:50%;background:var(--red)}
+.svc__note{margin:0 0 28px;color:var(--white);font-weight:500}
+.svc__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.svc__photos button{padding:0;border:0;background:none;cursor:zoom-in;aspect-ratio:3/4;overflow:hidden;border-radius:4px}
+.svc__photos img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.svc__photos button:hover img{transform:scale(1.04)}
+
+/* ---------- objects strip ---------- */
+.objects{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px;padding:0;list-style:none}
+.objects li{border:1px solid var(--line);border-radius:24px;padding:10px 20px;font-size:16px}
+
+/* ---------- process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:48px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{padding:0 24px 0 0;position:relative;counter-increment:s}
+.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:48px;height:48px;border:2px solid var(--red);border-radius:50%;font:700 20px/1 var(--display);margin-bottom:22px;background:var(--black);position:relative;z-index:1}
+.steps li::after{content:"";position:absolute;top:24px;left:48px;right:0;height:1px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps b{display:block;font-family:var(--display);font-size:21px;text-transform:uppercase;margin-bottom:8px}
+.steps span{color:var(--muted);font-size:16px}
+
+/* ---------- gallery ---------- */
+.gallery{columns:4;column-gap:12px;margin-top:44px}
+.gallery button{display:block;width:100%;padding:0;border:0;background:none;margin:0 0 12px;cursor:zoom-in;break-inside:avoid;border-radius:4px;overflow:hidden}
+.gallery img{width:100%;height:auto;transition:transform .4s,filter .4s}
+.gallery button:hover img{transform:scale(1.03)}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:calc(56px + env(safe-area-inset-top,0px)) 64px calc(56px + env(safe-area-inset-bottom,0px))}
+.lb.open{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}}
+.lb img{max-height:100%;max-width:100%;object-fit:contain;border-radius:4px}
+.lb button{position:absolute;background:none;border:2px solid var(--line);color:var(--white);width:48px;height:48px;border-radius:50%;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb button:hover{border-color:var(--red)}
+.lb__close{top:calc(16px + env(safe-area-inset-top,0px));right:16px}
+.lb__prev{left:12px;top:50%;transform:translateY(-50%)}
+.lb__next{right:12px;top:50%;transform:translateY(-50%)}
+
+/* ---------- contacts ---------- */
+.contact{text-align:center;padding:120px 0}
+.contact__phone{display:inline-block;font-family:var(--display);font-weight:700;font-size:clamp(38px,8vw,96px);line-height:1;text-decoration:none;margin:24px 0 36px;letter-spacing:.01em}
+.contact__phone:hover{color:var(--red)}
+.contact .sub{margin:0 auto}
+.contact .actions{justify-content:center}
+footer{border-top:1px solid var(--line);padding:32px 0 calc(32px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:72px;width:auto}
+
+/* ---------- mobile call bar ---------- */
+.callbar{display:none}
+
+@media (max-width:960px){
+  .top nav{display:none}
+  .hero{padding:40px 0 72px}
+  .hero h1{font-size:clamp(26px,7.4vw,48px)}
+  .svc{grid-template-columns:1fr;gap:28px}
+  .svc__head{position:static}
+  .steps{grid-template-columns:1fr 1fr;gap:36px 0}
+  .steps li:nth-child(2)::after{display:none}
+  .gallery{columns:3}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .top .wrap{height:68px}
+  .top__logo img{height:52px}
+  .top__phone{font-size:15px}
+  .top .social{display:none}
+  .callbar .btn{padding:0 10px;font-size:15px;gap:6px}
+  .callbar .btn svg{width:20px;height:20px}
+  section{padding:72px 0}
+  .svc__list{columns:1}
+  .svc__photos{grid-template-columns:repeat(2,1fr)}
+  .svc__photos button:nth-child(3){display:none}
+  .steps{grid-template-columns:1fr}
+  .steps li::after{display:none}
+  .gallery{columns:2;column-gap:8px}
+  .gallery button{margin-bottom:8px}
+  .lb{padding-left:12px;padding-right:12px}
+  .lb__prev,.lb__next{top:auto;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:none}
+  .lb__prev{left:calc(50% - 60px)}.lb__next{right:calc(50% - 60px)}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:30;gap:10px;transform:translateY(160%);transition:transform .3s}
+  .callbar.show{transform:none}
+  .callbar a{flex:1;min-height:52px}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="top__logo" href="#" aria-label="Про системы — на главную"><img src="img/logo.png" alt="Про системы" width="975" height="580"></a>
+    <nav aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#how">Как работаем</a>
+      <a href="#works">Фото работ</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="top__right">
+      <div class="social"><a href="https://t.me/prosystem808" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.2-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3-14.6c.3-1.3-.5-1.9-1.2-1.5zM9.5 14.2l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.1-1.7-4.3z"/></svg></a><a href="https://vk.ru/pro.sistem" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.8 17.5C6.4 17.5 2.7 13.1 2.5 5.8h3.2c.1 5.4 2.5 7.6 4.4 8.1V5.8h3v4.6c1.9-.2 3.8-2.3 4.5-4.6h3c-.5 2.8-2.6 4.9-4 5.8 1.5.7 3.9 2.6 4.8 5.9h-3.3c-.7-2.2-2.5-3.9-5-4.2v4.2h-.3z"/></svg></a></div>
+      <a class="top__phone" href="tel:+79161996965">8 916 199-69-65</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero" id="hero">
+    <div class="wrap">
+      <div>
+        <h1><span>Электрика,</span><span>видеонаблюдение</span><span>и оптоволокно</span></h1>
+        <p class="hero__lead">Электромонтаж любой сложности, камеры и домофоны, сварка и ремонт оптических линий. <b>Отдельные задачи и объекты под ключ</b> — для частных клиентов и организаций.</p>
+        <div class="actions">
+          <a class="btn btn--solid" href="tel:+79161996965">Позвонить</a>
+          <a class="btn btn--ghost" href="https://t.me/prosystem808" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.2-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3-14.6c.3-1.3-.5-1.9-1.2-1.5zM9.5 14.2l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.1-1.7-4.3z"/></svg>Telegram</a>
+          <a class="btn btn--ghost" href="https://wa.me/79161996965" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 5 5.2-1.4A9.8 9.8 0 1 0 12 2.2zm0 17.9c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-3-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.6-.7-2.5-1.6-.7-.6-1.1-1.3-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1 1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>WhatsApp</a>
+        </div>
+        <p class="hero__area">Выезжаем по Москве и Московской области</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 class="h2">Что мы делаем</h2>
+      <p class="sub">Четыре направления, которые часто нужны на одном объекте. Можно заказать одну работу или всё сразу — одна бригада, один ответственный.</p>
+
+      <article class="svc">
+        <div class="svc__head">
+          <h3>Видео&shy;наблюдение</h3>
+          <p>Полный комплекс — от подбора оборудования до настроенного просмотра с телефона.</p>
+        </div>
+        <div>
+          <ul class="svc__list">
+            <li>Продажа оборудования</li>
+            <li>Проектирование и подбор системы</li>
+            <li>Монтаж видеокамер</li>
+            <li>Пусконаладочные работы</li>
+            <li>Техническое обслуживание</li>
+            <li>Настройка удалённого доступа</li>
+            <li>Подключение и просмотр с телефона</li>
+          </ul>
+          <p class="svc__note">Для дома, квартиры, офиса, магазина, склада или территории.</p>
+          <div class="svc__photos">
+            <button type="button" data-lb="img/cam-pole.jpg"><img src="img/cam-pole.jpg" alt="Две камеры HiWatch на опоре" loading="lazy"></button>
+            <button type="button" data-lb="img/ptz.jpg"><img src="img/ptz.jpg" alt="Поворотная PTZ-камера на опоре" loading="lazy"></button>
+            <button type="button" data-lb="img/nvr.jpg"><img src="img/nvr.jpg" alt="Видеорегистратор: изображение со всех камер на мониторе" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc__head">
+          <h3>Электро&shy;монтаж</h3>
+          <p>От замены одной линии до полного электромонтажа дома, квартиры, офиса или склада.</p>
+        </div>
+        <div>
+          <ul class="svc__list">
+            <li>Подключение вводного кабеля</li>
+            <li>Электромонтаж домов и квартир</li>
+            <li>Складские и офисные помещения</li>
+            <li>Замена электропроводки</li>
+            <li>Сборка электрощитов любой сложности</li>
+            <li>Установка заземления</li>
+            <li>Подключение генераторов</li>
+            <li>Фасадное освещение</li>
+            <li>Новогоднее освещение домов</li>
+          </ul>
+          <div class="svc__photos">
+            <button type="button" data-lb="img/panel-pro.jpg"><img src="img/panel-pro.jpg" alt="Собранный электрощит с маркировкой" loading="lazy"></button>
+            <button type="button" data-lb="img/panel-iek.jpg"><img src="img/panel-iek.jpg" alt="Разводка автоматов в щите" loading="lazy"></button>
+            <button type="button" data-lb="img/heated-floor.jpg"><img src="img/heated-floor.jpg" alt="Электропроводка и тёплый пол в доме" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc__head">
+          <h3>Домофони&shy;зация</h3>
+          <p>Домофоны и контроль доступа для частных домов, квартир и коммерческих объектов.</p>
+        </div>
+        <div>
+          <ul class="svc__list">
+            <li>Установка домофонов</li>
+            <li>Монтаж видеодомофонов</li>
+            <li>Установка вызывных панелей</li>
+            <li>Электромагнитные и электромеханические замки</li>
+            <li>Установка кнопок выхода</li>
+            <li>Настройка доступа и открытия двери</li>
+            <li>Замена и ремонт оборудования</li>
+            <li>Техническое обслуживание</li>
+          </ul>
+          <div class="svc__photos">
+            <button type="button" data-lb="img/intercom-2.jpg"><img src="img/intercom-2.jpg" alt="Вызывная панель с защитным козырьком" loading="lazy"></button>
+            <button type="button" data-lb="img/intercom-monitor.jpg"><img src="img/intercom-monitor.jpg" alt="Монитор видеодомофона HiWatch" loading="lazy"></button>
+            <button type="button" data-lb="img/outdoor-box.jpg"><img src="img/outdoor-box.jpg" alt="Уличный шкаф с оборудованием" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc__head">
+          <h3>Сварка оптоволокна</h3>
+          <p>Подключаем, восстанавливаем и находим неисправности на оптических линиях.</p>
+        </div>
+        <div>
+          <ul class="svc__list">
+            <li>Сварка оптоволокна</li>
+            <li>Подключение оптических линий</li>
+            <li>Ремонт и восстановление соединений</li>
+            <li>Поиск и устранение проблем</li>
+          </ul>
+          <div class="svc__photos">
+            <button type="button" data-lb="img/fiber-welder.jpg"><img src="img/fiber-welder.jpg" alt="Сварочный аппарат для оптоволокна" loading="lazy"></button>
+            <button type="button" data-lb="img/fiber-panel.jpg"><img src="img/fiber-panel.jpg" alt="Оптический кросс после разварки" loading="lazy"></button>
+            <button type="button" data-lb="img/fiber-box-2.jpg"><img src="img/fiber-box-2.jpg" alt="Оптическая муфта с уложенными волокнами" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
+
+      <ul class="objects" aria-label="Объекты">
+        <li>Частные дома</li><li>Квартиры</li><li>Офисы</li><li>Магазины</li><li>Склады</li><li>Территории</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2 class="h2">Как работаем</h2>
+      <p class="sub">С частными лицами и бизнесом — одинаково внимательно к объекту и срокам.</p>
+      <ol class="steps">
+        <li><b>Приедем</b><span>Выезжаем на объект по Москве и области.</span></li>
+        <li><b>Оценим</b><span>Осмотрим объект и уточним задачу.</span></li>
+        <li><b>Предложим</b><span>Оптимальное решение и подходящее оборудование.</span></li>
+        <li><b>Выполним</b><span>Смонтируем, настроим и покажем, как пользоваться.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="works">
+    <div class="wrap">
+      <h2 class="h2">Фото работ</h2>
+      <p class="sub">Реальные объекты: щиты, проводка, камеры, домофоны, слаботочные шкафы и оптика.</p>
+      <div class="gallery" id="gallery">
+        <button type="button" data-lb="img/panel-pro.jpg"><img src="img/panel-pro.jpg" alt="Электрощит с маркировкой линий" loading="lazy" width="720" height="1080"></button>
+        <button type="button" data-lb="img/cam-aframe.jpg"><img src="img/cam-aframe.jpg" alt="Камера на участке с загородным домом" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/cam-pole.jpg"><img src="img/cam-pole.jpg" alt="Камеры видеонаблюдения на опоре" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/fiber-panel.jpg"><img src="img/fiber-panel.jpg" alt="Оптический кросс после разварки" loading="lazy"></button>
+        <button type="button" data-lb="img/tech-room.jpg"><img src="img/tech-room.jpg" alt="Техническое помещение: щит, стабилизаторы, слаботочка" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/intercom-1.jpg"><img src="img/intercom-1.jpg" alt="Вызывная панель домофона" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/intercom-monitor.jpg"><img src="img/intercom-monitor.jpg" alt="Монитор видеодомофона" loading="lazy"></button>
+        <button type="button" data-lb="img/ptz.jpg"><img src="img/ptz.jpg" alt="Поворотная PTZ-камера" loading="lazy" width="720" height="960"></button>
+        <button type="button" data-lb="img/panel-abb.jpg"><img src="img/panel-abb.jpg" alt="Щит с реле напряжения" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/nvr.jpg"><img src="img/nvr.jpg" alt="Видеорегистратор и монитор с камерами" loading="lazy" width="1280" height="960"></button>
+        <button type="button" data-lb="img/heated-floor.jpg"><img src="img/heated-floor.jpg" alt="Проводка и тёплый пол" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/fiber-box-1.jpg"><img src="img/fiber-box-1.jpg" alt="Разварка волокон в кроссе" loading="lazy"></button>
+        <button type="button" data-lb="img/cam-wall.jpg"><img src="img/cam-wall.jpg" alt="Камера под свесом кровли" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/dome-office.jpg"><img src="img/dome-office.jpg" alt="Купольная камера в офисе" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/panel-iek.jpg"><img src="img/panel-iek.jpg" alt="Сборка щита" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/net-boxes.jpg"><img src="img/net-boxes.jpg" alt="Слаботочные щиты с сетевым оборудованием" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/panels-two.jpg"><img src="img/panels-two.jpg" alt="Два щита: силовой и дополнительный" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/fiber-box-2.jpg"><img src="img/fiber-box-2.jpg" alt="Оптическая муфта" loading="lazy"></button>
+        <button type="button" data-lb="img/stabilizer.jpg"><img src="img/stabilizer.jpg" alt="Стабилизатор напряжения и щит" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/sockets.jpg"><img src="img/sockets.jpg" alt="Открытая проводка в кабель-канале" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/outdoor-box.jpg"><img src="img/outdoor-box.jpg" alt="Уличный шкаф на опоре" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/cam-winter.jpg"><img src="img/cam-winter.jpg" alt="Уличная камера на бетонной опоре" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/equipment.jpg"><img src="img/equipment.jpg" alt="Оборудование HiWatch перед монтажом" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/panel-wood.jpg"><img src="img/panel-wood.jpg" alt="Щит в деревянном доме" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/dome-close.jpg"><img src="img/dome-close.jpg" alt="Купольная камера HiWatch" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/tech-room-2.jpg"><img src="img/tech-room-2.jpg" alt="Стабилизаторы и слаботочные шкафы" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/intercom-2.jpg"><img src="img/intercom-2.jpg" alt="Домофон с козырьком" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/net-cabinet.jpg"><img src="img/net-cabinet.jpg" alt="Шкаф с регистратором" loading="lazy" width="720" height="1280"></button>
+        <button type="button" data-lb="img/corridor.jpg"><img src="img/corridor.jpg" alt="Освещение в доме" loading="lazy" width="720" height="1280"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacts">
+    <div class="wrap">
+      <h2 class="h2">Остались вопросы?</h2>
+      <p class="sub">Позвоните или напишите в мессенджер — ответим на вопросы и договоримся о выезде на объект.</p>
+      <a class="contact__phone" href="tel:+79161996965">8 916 199-69-65</a>
+      <div class="actions">
+        <a class="btn btn--solid" href="tel:+79161996965">Позвонить</a>
+        <a class="btn btn--ghost" href="https://t.me/prosystem808" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.2-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3-14.6c.3-1.3-.5-1.9-1.2-1.5zM9.5 14.2l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.1-1.7-4.3z"/></svg>Telegram</a>
+        <a class="btn btn--ghost" href="https://wa.me/79161996965" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 5 5.2-1.4A9.8 9.8 0 1 0 12 2.2zm0 17.9c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-3-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.6-.7-2.5-1.6-.7-.6-1.1-1.3-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1 1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>WhatsApp</a>
+        <a class="btn btn--ghost" href="https://vk.ru/pro.sistem" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.8 17.5C6.4 17.5 2.7 13.1 2.5 5.8h3.2c.1 5.4 2.5 7.6 4.4 8.1V5.8h3v4.6c1.9-.2 3.8-2.3 4.5-4.6h3c-.5 2.8-2.6 4.9-4 5.8 1.5.7 3.9 2.6 4.8 5.9h-3.3c-.7-2.2-2.5-3.9-5-4.2v4.2h-.3z"/></svg>ВКонтакте</a>
+      </div>
+      <p class="hero__area">Москва и Московская область</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="Про системы" width="975" height="580">
+    <span>Электрика, видеонаблюдение и оптоволоконные решения</span>
+    <div class="top__right"><div class="social"><a href="https://t.me/prosystem808" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.2-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3-14.6c.3-1.3-.5-1.9-1.2-1.5zM9.5 14.2l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.1-1.7-4.3z"/></svg></a><a href="https://vk.ru/pro.sistem" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.8 17.5C6.4 17.5 2.7 13.1 2.5 5.8h3.2c.1 5.4 2.5 7.6 4.4 8.1V5.8h3v4.6c1.9-.2 3.8-2.3 4.5-4.6h3c-.5 2.8-2.6 4.9-4 5.8 1.5.7 3.9 2.6 4.8 5.9h-3.3c-.7-2.2-2.5-3.9-5-4.2v4.2h-.3z"/></svg></a><a href="https://wa.me/79161996965" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 5 5.2-1.4A9.8 9.8 0 1 0 12 2.2zm0 17.9c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-3-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.6-.7-2.5-1.6-.7-.6-1.1-1.3-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1 1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg></a></div><a href="tel:+79161996965">8 916 199-69-65</a></div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn--solid" href="tel:+79161996965">Позвонить</a>
+  <a class="btn btn--ghost" style="background:#000" href="https://t.me/prosystem808" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.2-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3-14.6c.3-1.3-.5-1.9-1.2-1.5zM9.5 14.2l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.1-1.7-4.3z"/></svg>Telegram</a>
+  <a class="btn btn--ghost" style="background:#000;flex:0 0 52px;padding:0" href="https://vk.ru/pro.sistem" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.8 17.5C6.4 17.5 2.7 13.1 2.5 5.8h3.2c.1 5.4 2.5 7.6 4.4 8.1V5.8h3v4.6c1.9-.2 3.8-2.3 4.5-4.6h3c-.5 2.8-2.6 4.9-4 5.8 1.5.7 3.9 2.6 4.8 5.9h-3.3c-.7-2.2-2.5-3.9-5-4.2v4.2h-.3z"/></svg></a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Фото работы">
+  <img id="lbImg" alt="">
+  <button class="lb__prev" type="button" aria-label="Предыдущее фото">‹</button>
+  <button class="lb__next" type="button" aria-label="Следующее фото">›</button>
+  <button class="lb__close" type="button" aria-label="Закрыть">×</button>
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'),img=document.getElementById('lbImg');
+  var list=[].slice.call(document.querySelectorAll('#gallery [data-lb]')).map(function(b){return b.getAttribute('data-lb')});
+  var i=0,last=null;
+  function show(n){i=(n+list.length)%list.length;img.src=list[i];}
+  function open(src,btn){last=btn;var k=list.indexOf(src);show(k<0?0:k);lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('.lb__close').focus();}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';if(last)last.focus();}
+  document.querySelectorAll('[data-lb]').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-lb'),b)})});
+  lb.querySelector('.lb__close').onclick=close;
+  lb.querySelector('.lb__prev').onclick=function(){show(i-1)};
+  lb.querySelector('.lb__next').onclick=function(){show(i+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);
+  });
+  var cb=document.querySelector('.callbar'),hero=document.getElementById('hero');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(e){cb.classList.toggle('show',!e[0].isIntersecting)}).observe(hero)}else{cb.classList.add('show')}
+  var x0=null;
+  lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)show(d<0?i+1:i-1);x0=null});
+})();
+</script>
+</body>
+</html>
